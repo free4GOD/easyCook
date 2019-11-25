@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>easyCook</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>621</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTableWidget" name="tableWidget">
+       <row>
+        <property name="text">
+         <string>Lunes</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Martes</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Miércoles</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Jueves</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Viernes</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Sábado</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Domingo</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Desayuno</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Almuerzo</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Merienda</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Cena</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Colaciones</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>0</y>
+      <width>162</width>
+      <height>296</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Lista de compras</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Agregar al menú</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>Quitar del menú</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>Guardar menú</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Nueva receta</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="newIngredient">
+       <property name="text">
+        <string>Nuevo ingrediente</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>&amp;Menu</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="separator"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionExportar"/>
+    <addaction name="separator"/>
+    <addaction name="actionCerrar"/>
+   </widget>
+   <widget class="QMenu" name="menuRecipes">
+    <property name="title">
+     <string>Recetas</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionEdit_2"/>
+    <addaction name="actionAgregar_al_menu"/>
+    <addaction name="actionView"/>
+    <addaction name="actionImpor"/>
+    <addaction name="actionExport"/>
+    <addaction name="actionExport_All_2"/>
+   </widget>
+   <widget class="QMenu" name="menuIngredients">
+    <property name="title">
+     <string>In&amp;gredientes</string>
+    </property>
+    <addaction name="actionNew_Ingredient"/>
+    <addaction name="actionEdit"/>
+    <addaction name="actionView_All"/>
+    <addaction name="actionImport"/>
+    <addaction name="actionImport_All"/>
+    <addaction name="actionExport_All"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Ay&amp;uda</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuRecipes"/>
+   <addaction name="menuIngredients"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_Ingredient">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionView_All">
+   <property name="text">
+    <string>Ver todos</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionNuevo">
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionExportar">
+   <property name="text">
+    <string>Exportar</string>
+   </property>
+  </action>
+  <action name="actionCerrar">
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionExport_All">
+   <property name="text">
+    <string>Export todos</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Importar</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>Nueva</string>
+   </property>
+  </action>
+  <action name="actionEdit_2">
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </action>
+  <action name="actionView">
+   <property name="text">
+    <string>Ver todas</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_2">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionImpor">
+   <property name="text">
+    <string>Importar</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Exportar</string>
+   </property>
+  </action>
+  <action name="actionExport_All_2">
+   <property name="text">
+    <string>Exportar todas</string>
+   </property>
+  </action>
+  <action name="actionImport_All">
+   <property name="text">
+    <string>Import todos</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+  </action>
+  <action name="actionAgregar_al_menu">
+   <property name="text">
+    <string>Agregar al menu</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionNew_Ingredient</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
